@@ -16,7 +16,15 @@ export default function useLoadMap() {
 
     useGoogleMapsLibrary("maps", lib => {
         const map = new lib.Map(document.getElementById("map") as HTMLElement, {
-            center: { lat: 43.4718, lng: -80.543 },
+            center: { lat: 18.646121075029072, lng: 73.75923471684222 },
+			setGoogleMap(map);
+				new lib.Marker({
+  position: { lat: 18.646121075029072, lng: 73.75923471684222}, // your building or center point
+  map,
+  title: "My Campus"
+});
+
+
             zoom: 16,
             mapId: 'map',
             gestureHandling: "greedy",
